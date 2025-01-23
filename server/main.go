@@ -29,7 +29,8 @@ func main() {
 	// Routes
 	r.Get("/", handlers.HandleHome)      // Updated to use exported function
 	r.Post("/chat", handlers.HandleChat) // Updated to use exported function
-
+	r.Post("/upload-document", handlers.UploadDocument)
+	// r.Post("/explain-document")
 	fmt.Println("Server starting on port 8000...")
 	http.ListenAndServe(":8000", r)
 }
